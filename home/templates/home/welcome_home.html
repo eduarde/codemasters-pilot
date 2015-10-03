@@ -1,4 +1,12 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <div>
+    <h1><a href="/">CodeMasters Club</a></h1>
+</div>
+
+{% for ab in about %}
+    <div>
+        <h1><a href="">{{ ab.title }}</a></h1>
+        <p>{{ ab.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 </html>

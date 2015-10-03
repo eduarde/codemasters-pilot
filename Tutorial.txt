@@ -147,11 +147,16 @@ Dynamic data in templates
 	3. Need to pass the About Model to the view
 	4. Import About model
 	5. Make a queryset
-		about = About.getobjects.all()
+		about = About.objects.all()
 		pass about to the template
 			render(request, 'home/welcome_home.html', {'about': about})
 			
 Deploy!
+
+Templates
+	1. Describe template tags
+	2. Use template tag to display the about info in the welcome_home.html
+	
 	
 	
 
