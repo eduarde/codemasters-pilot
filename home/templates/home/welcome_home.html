@@ -55,9 +55,13 @@
         
         <div class="block">
             <a name="ss"></a>
+            <center><h2>The members of CodeMasters
+                <span class="tagline"></span>
+            </h2></center>
             {% for member in members %}
             <article class="clearfix speaker-details">
 
+                <div class="image"><img src="{% static "images/developer.jpg"%}" alt="{{ member.last_name }} {{ member.first_name }}"></div>
                 <div class="details">
                     <h3>{{ member.last_name }} {{ member.first_name }}</h3>
                     <i>{{ member.position }}</i>
