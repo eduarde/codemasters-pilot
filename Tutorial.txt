@@ -1,0 +1,93 @@
+http://tutorial.djangogirls.org/en/django/index.html
+
+GitHub
+	Account GitHub
+	Install Git (Git GUI + Git Shell)
+	Fork tutorial + presentation
+	Clone project: codemasters
+
+
+Code editor:
+	Sublime Text
+	
+Python installation 
+	1. Install python 3.5.0 
+	2. Add python to Path
+	3. Check if python was installed :
+			cmd : python --version
+			
+Introduction to Python
+	1. few details about Python + link 
+	2. Play with python in Python prompt
+	
+What is Django
+	1. few details about Django + link tutorial
+	2. Why do we need a framework
+
+Django installation
+	1. create virtual env:
+		mkdir codemasters
+		cd codemasters
+		python -m venv myvenv
+	2. Working with virtualenv
+		../codemasters> myvenv\Scripts\activate
+	3. Install Django: pip install django==1.8.4
+	
+Create Django project:
+	1. (myvenv) ../codemasters> django-admin startproject mysite . (don't forget .  !)
+	2. present the structure
+	3. Change settings:
+		TIME_ZONE = 'Europe/Bucharest'
+		STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+		DATABASE default is dbsqlite3
+	4. Create database for our project
+		(myvenv) ../codemasters> python manage.py migrate
+	5. Start Web server
+		(myvenv) ../codemasters> python manage.py runserver
+		
+Create application
+	1. It is nice to have all organized , so we will create an application
+	2. Create app home
+		(myvenv) ../codemasters> python manage.py startapp home
+	3. Present the structure
+	4. Tell Django that it should use the app
+		mysite.settings.py
+			add 'home' in INSTALLED_APPS
+			
+Create model
+	1. Let's create a model for our home app
+		in home/models.py 
+		
+		The models.Model is the type of About class
+		class About(models.Model):
+		
+	2. Create tables for models in our database
+		a. Need to notify Django that we have some changes in our model
+			(myvenv) ../codemasters> python manage.py makemigrations home
+		b. migration file prepared; we will have to apply it now to our db
+			(myvenv) ../codemasters> python manage.py migrate home
+			
+Django admin
+	1. Create a superuser:
+		python manage.py createsuperuser
+	2. Our model needs to be visible in admin page. 
+	3. Need to register the model as follow:
+		a. open home/admin.py	
+		b. import the About model from .models
+		c. register the model: admin.site.register(About)
+	4. Start web server
+	5. Navigate to  http://127.0.0.1:8000/admin/
+	
+Deploy time!
+		1. Open Git Shell
+		2. Navigate to the codemasters folder
+		3. run git init
+		4. create .gitignore file in base dir
+			*.pyc
+			__pycache__
+			myvenv
+			db.sqlite3
+			/static
+			.DS_Store
+		5. 
+	
