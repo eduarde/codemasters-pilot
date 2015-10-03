@@ -156,6 +156,11 @@ Deploy!
 Templates
 	1. Describe template tags
 	2. Use template tag to display the about info in the welcome_home.html
+	3. Runserver and test
+
+CSS
+	
+
 	
 	
 	

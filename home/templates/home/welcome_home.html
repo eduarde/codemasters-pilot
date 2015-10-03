@@ -1,4 +1,11 @@
+{% load staticfiles %}
 <html>
+<head>
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+</head>
+<body>
+
+
     <div>
     <h1><a href="/">CodeMasters Club</a></h1>
 </div>
@@ -9,4 +16,16 @@
         <p>{{ ab.text|linebreaks }}</p>
     </div>
 {% endfor %}
+
+
+{% for member in members %}
+    <div>
+    	<p><img src="{{ member.avatar.path }}" />sa</p>	
+        <p>{{ member.avatar.path }}</p>
+        <h1>{{ member.first_name }} {{ member.last_name }} </h1>
+        <i>{{ member.position }}</i>
+        <p>{{ member.biography|linebreaks }}</p>
+    </div>
+{% endfor %}
+</body>
 </html>
