@@ -1,0 +1,170 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.speakers .speaker {
+    text-align:center;
+    text-transform:uppercase;
+    line-height:1.2;
+    font-weight:400;
+}
+
+.speakers .speaker img {
+    margin-bottom:20px;
+    width:80%;
+    border-radius:50%;
+    max-width:204px;
+    border:1px solid #f4f4f4;
+    padding:8px;
+    transition:all 0.2s ease-out;
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
+}
+
+.speakers .speaker a:hover img {
+    border:8px solid rgba(76,194,32,0.4);
+}
+
+.speakers .speaker-link,.speakers .speaker-company  {
+    font-size:0.9em;
+    color:#666;
+    font-weight:400;
+    word-wrap:break-word;
+    padding-top:5px;
+}
+
+.speakers .tba {
+    background:url(../img/bk_tba.png);
+    line-height:100%;
+    color:#fff;
+    text-shadow:0 -1px #666;
+    height:100%;
+}
+
+.speakers-details article:first-of-type {
+    border-top:1px solid #D9DCDE;
+    padding-top:40px;
+}
+
+.speaker-details, .sponsor-details {
+    border-bottom:1px solid #D9DCDE;
+    padding-bottom:30px;
+    margin-bottom:40px;
+    text-align:left;
+}
+
+.speaker-details .image, .sponsor-details .image {
+    float:left;
+    width:20%;
+    margin-right:5%;
+    text-align:center;
+}
+
+.speaker-details .details, .sponsor-details .details {
+    float:left;
+    width:75%;
+}
+
+.speaker-details .url, .speaker-details .twitter, .sponsor-details .url, .sponsor-details .twitter {
+    display:inline-block;
+    text-transform: uppercase;
+    color:#666;
+    font-size:0.8em;
+    padding:15px 27px;
+    font-weight:700;
+}
+
+.speaker-details .url, .sponsor-details .url {
+    background:url(../img/ico_url.png) 0 50% no-repeat;
+}
+
+.speaker-details .twitter, .sponsor-details .twitter {
+    background:url(../img/ico_twitter.png) 0 50% no-repeat;
+}
+
+.speaker-details .image img{
+    max-width:80%;
+    border-radius: 50%;
+
+}
+
+.speaker-details h3 {
+    text-transform: uppercase;
+    margin:0;
+    color:#3300ff;
+    font-size:22px;
+}
+
+.speaker-details h4 {
+    text-transform: uppercase;
+    font-size:17px;
+}
+
+.block {
+    width:90%;
+    max-width:1130px;
+    margin:0 auto;
+    position:relative;
+}
+
+.block:before,
+.block:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.block:after {
+    clear: both;
+}
+
+.main-tagline {
+    font-weight:300;
+    font-size:32px;
+    display:none;
+}
+
+.home .main-tagline {
+    display:block;
+}
