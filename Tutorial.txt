@@ -4,7 +4,7 @@ GitHub
 	Account GitHub
 	Install Git (Git GUI + Git Shell)
 	Fork tutorial + presentation
-	Clone project: codemasters
+	-Clone project: codemasters
 
 
 Code editor:
@@ -89,5 +89,72 @@ Deploy time!
 			db.sqlite3
 			/static
 			.DS_Store
-		5. 
+		5. Open Git Gui
+		6. Choose codemasters dir
+		7. Publish
+		
+You: Clone the repository
 	
+Django Urls
+	1. Open mysite/urls.py
+	2. Regex
+	3. Include the urls from home app
+		url(r'' include('home.urls')),
+	4. Navigate in home app
+	5. Create file: urls.py
+	6. Add imports
+		from django.conf.urls import url
+		from . import views
+	7. Create a list of urlpatterns
+	8. Add the following url:
+		url(r'^$', views.welcome_home, name='welcome_home'),
+	9. Explain the regex	
+	
+Django views
+	1. Description
+	2. Open home/views.py
+	3. def welcome_home(request):
+		return render(request, 'home/welcome_home.html', {})
+	4. Explain
+	
+HTML
+	1. Create template dir in home app
+	2. Under template dir create another dir called home
+	3. Create html file called: welcome_home.html
+		<html>
+			<p>Hi there!</p>
+			<p>It works!</p>
+		</html>
+	4. RunServer and test
+
+Django ORM and QuerySets
+	1. What is queryset?
+	2. Django shell
+		(myvenv) ../codemasters> python manage.py shell
+	3. Play a bit:
+		example:
+			from home.models import About
+			About.objects.all()
+			
+			from django.contrib.auth.models import User
+			me = User.objects.get(username='admin')
+			
+	4. Exit from shell with command exit()
+
+Dynamic data in templates
+	1. Describe
+	2. Open home/views.py
+	3. Need to pass the About Model to the view
+	4. Import About model
+	5. Make a queryset
+		about = About.getobjects.all()
+		pass about to the template
+			render(request, 'home/welcome_home.html', {'about': about})
+			
+Deploy!
+	
+	
+
+		
+	
+		
