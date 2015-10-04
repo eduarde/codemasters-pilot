@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
       <link href="{% static "css/sticky-footer-navbar.css" %}" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 </head>
 
   <body>
@@ -42,6 +43,22 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+      <!-- begin header -->
+            <header role="banner">
+                <div class="block">
+                    <!-- begin .logo -->
+                    <h1 class="logo">
+                        <p>CodeMasters</p>
+                        <span>Cerner ROMANIA</span>
+                    </h1>
+                    <h2 class="main-tagline">
+                        A <strong>JavaScript</strong> conference for Romania and Eastern-Europe.
+                    </h2>
+                    <!-- end .logo -->
+                </div>
+            </header>
+            <!-- end header -->
 
     <div class="container">
       {% for ab in about %}
